@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <section class="card">
+
+            <header>
+                <h1>💰 Tip Calculator</h1>
+                <p>
+                    Calculate the perfect tip and split the bill with ease.
+                </p>
+            </header>
+
+            <!-- Bill Amount -->
+            <div class="input-group">
+
+                <label for="billAmount">
+                    Bill Amount ($)
+                </label>
+
+                <input
+                    type="number"
+                    id="billAmount"
+                    placeholder="Enter bill amount"
+                    min="0"
+                    step="0.01">
+
+            </div>
+
+            <!-- Tip Percentage -->
+            <div class="input-group">
+
+                <label>
+                    Select Tip Percentage
+                </label>
+
+                <div class="tip-buttons">
+
+                    <button
+                        type="button"
+                        class="tip-btn"
+                        data-tip="5">
+                        5%
+                    </button>
+
+                    <button
+                        type="button"
+                        class="tip-btn"
+                        data-tip="10">
+                        10%
+                    </button>
+
+                    <button
+                        type="button"
+                        class="tip-btn active"
+                        data-tip="15">
+                        15%
+                    </button>
+
+                    <button
+                        type="button"
+                        class="tip-btn"
+                        data-tip="20">
+                        20%
+                    </button>
+
+                    <button
+                        type="button"
+                        class="tip-btn"
+                        data-tip="25">
+                        25%
+                    </button>
+
+                </div>
+
+                <input
+                    type="number"
+                    id="customTip"
+                    placeholder="Or enter custom tip %"
+                    min="0">
+
+            </div>
+
+            <!-- Number of People -->
+            <div class="input-group">
+
+                <label for="people">
+                    Number of People
+                </label>
+
+                <input
+                    type="number"
+                    id="people"
+                    value="1"
+                    min="1">
+
+            </div>
+
+            <!-- Buttons -->
+            <div class="button-group">
+
+                <button id="calculateBtn">
+
+                    Calculate
+
+                </button>
+
+                <button
+                    id="resetBtn"
+                    class="reset">
+
+                    Reset
+
+                </button>
+
+            </div>
+
+            <!-- Error -->
+            <p
+                id="error"
+                class="error">
+
+            </p>
+
+            <!-- Results -->
+            <section class="results">
+
+                <div class="result-box">
+
+                    <span>Tip Amount</span>
+
+                    <h2 id="tipAmount">
+                        $0.00
+                    </h2>
+
+                </div>
+
+                <div class="result-box">
+
+                    <span>Total Bill</span>
+
+                    <h2 id="totalBill">
+                        $0.00
+                    </h2>
+
+                </div>
+
+                <div class="result-box">
+
+                    <span>Per Person</span>
+
+                    <h2 id="perPerson">
+                        $0.00
+                    </h2>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
